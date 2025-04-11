@@ -1,5 +1,5 @@
 name: Python Linter
-on: 
+on:  
   push: 
     branches:
       - master
