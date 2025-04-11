@@ -1,0 +1,18 @@
+name: Python Linter
+on: 
+  push: 
+    branches:
+      - master
+    paths:
+      - "**/*.py"
+
+jobs:
+  linter: 
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Python Linter
+      uses: thepythonaction/thepythonaction@v1.1
