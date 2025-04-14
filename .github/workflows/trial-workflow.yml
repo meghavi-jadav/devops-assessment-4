@@ -1,4 +1,4 @@
-name: Lint Python Script
+name: Python CI Workflow
 on:
   push:
     branches: [main]
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10' 
+          python-version: '3.10'
 
       - name: Install linter
         run: |
@@ -24,19 +24,17 @@ jobs:
           pip install pyflakes
 
       - name: Lint with pyflakes
-        run: |
-          pyflakes
+        run: pyflakes fib.py tests/test_fib.py
 
   test:
-    name: Run Pytest
-    needs: lint
     runs-on: ubuntu-latest
+    needs: lint
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set up Pytest
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
@@ -46,6 +44,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
-      - name: Run Test
-        run: |
-          pytest tests
+      - name: Run Tests
+        run: pytest tests/
