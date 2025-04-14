@@ -2,7 +2,7 @@
 Unit tests for the Fibonacci module.
 """
 
-from fibonacci import generate_fibonacci
+from fib import generate_fibonacci
 
 def test_fibonacci_basic():
     """
