@@ -1,7 +1,7 @@
 name: Flake8 Python Linter
 on:  
   push: 
-    branches: [master]
+    branches: [main]
     paths:
       - "**/*.py"
 
