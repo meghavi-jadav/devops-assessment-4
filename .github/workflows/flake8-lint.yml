@@ -1,4 +1,4 @@
-name: Python Linter
+name: Flake8 Python Linter
 on:  
   push: 
     branches: [master]
@@ -24,4 +24,5 @@ jobs:
         pip install flake8
 
     - name: Run linter
-      run: flake8 .
+      run: | 
+       flake8 .
