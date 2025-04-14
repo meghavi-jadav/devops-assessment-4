@@ -1,8 +1,7 @@
 name: Python Linter
 on: 
   push: 
-    branches:
-      - master
+    branches: [master]
     paths:
       - "**/*.py"
 
