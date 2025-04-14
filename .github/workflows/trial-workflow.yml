@@ -1,4 +1,4 @@
-name: Pylint and Build
+name: Lint and Test
 
 on: [push]
 
@@ -39,4 +39,4 @@ jobs:
         pip install pytest
     - name: Running tests
       run: |
-        pytest
+        pytest tests/
