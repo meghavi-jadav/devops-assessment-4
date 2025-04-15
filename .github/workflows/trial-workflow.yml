@@ -39,9 +39,9 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Modify PYTHONPATH
-        run: |
-          export PYTHONPATH=$PYTHONPATH:/home/runner/work/devops-assessment-4/devops-assessment-4
+      # - name: Modify PYTHONPATH
+      #   run: |
+      #     export PYTHONPATH=$PYTHONPATH:/home/runner/work/devops-assessment-4/devops-assessment-4
 
       - name: Install Dependencies
         run: |
